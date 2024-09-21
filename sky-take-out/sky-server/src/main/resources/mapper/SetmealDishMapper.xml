@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sky.mapper.SetmealDishMapper">
+    <update id="updateSetmealDishes">
+        update setmeal_dish
+        <set>
+            <if test="id != null">id =#{id},</if>
+            <if test="dishId != null">dish_id = #{dishId},</if>
+            <if test="copies != null">copies =#{copies},</if>
+            <if test="name != null"> name = #{name},</if>
+            <if test="price != null">price = #{price},</if>
+            <if test="setmealId != null">setmeal_id =#{setmealId}</if>
+        </set>
+    </update>
+</mapper>
