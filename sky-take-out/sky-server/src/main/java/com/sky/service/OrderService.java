@@ -5,5 +5,5 @@ import org.springframework.stereotype.Service;
 @Service
 public interface OrderService {
 
-    void cancelOrder(Long id);
+    void cancelOrder(Long id) throws Exception;
 }
